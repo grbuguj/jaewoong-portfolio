@@ -41,7 +41,7 @@ export const projects: Project[] = [
     id: 'afw',
     image: '/projects/afw.png',
     title: 'AI Finance World',
-    subtitle: '졸업작품 · 멀티에이전트 금융 시뮬레이션',
+    subtitle: '멀티에이전트 금융 시뮬레이션',
     date: '2026.03 ~',
     description: '멀티 에이전트들이 매수·매도 주문을 주고받는 금융 거래 시뮬레이션 백엔드. 졸업작품으로 개발 중.',
     role: 'PM 겸 백엔드 설계. 헥사고날 아키텍처 구성, Kafka 메시지 파이프라인·Redis 캐시 전략 설계, 멀티에이전트 트랜잭션 흐름 구현.',
