@@ -86,16 +86,16 @@ export default function GraphView() {
           const near = adj[d.id];
           node.select('circle').attr('opacity', (n) => (near.has(n.id) ? 1 : 0.15));
           edge.attr('opacity', (l) => {
-            const s = (l.source as GraphNode).id;
-            const t = (l.target as GraphNode).id;
+            const s = (l.source as unknown as GraphNode).id;
+            const t = (l.target as unknown as GraphNode).id;
             return s === d.id || t === d.id ? 1 : 0.05;
           }).attr('stroke', (l) => {
-            const s = (l.source as GraphNode).id;
-            const t = (l.target as GraphNode).id;
+            const s = (l.source as unknown as GraphNode).id;
+            const t = (l.target as unknown as GraphNode).id;
             return s === d.id || t === d.id ? '#ff8a3d' : '#cbd5e1';
           }).attr('stroke-width', (l) => {
-            const s = (l.source as GraphNode).id;
-            const t = (l.target as GraphNode).id;
+            const s = (l.source as unknown as GraphNode).id;
+            const t = (l.target as unknown as GraphNode).id;
             return s === d.id || t === d.id ? 2 : 1;
           });
         })
@@ -113,8 +113,8 @@ export default function GraphView() {
       const sim = d3.forceSimulation<GraphNode>(nodes)
         .force('link', d3.forceLink(links).id((d) => (d as GraphNode).id)
           .distance((l) => {
-            const sg = (l.source as GraphNode).group;
-            const tg = (l.target as GraphNode).group;
+            const sg = (l.source as unknown as GraphNode).group;
+            const tg = (l.target as unknown as GraphNode).group;
             if (sg === 'self' || tg === 'self') return 125;
             if (sg === 'cat' || tg === 'cat') return 68;
             return 92;
@@ -127,10 +127,10 @@ export default function GraphView() {
 
       sim.on('tick', () => {
         edge
-          .attr('x1', (l) => (l.source as GraphNode).x ?? 0)
-          .attr('y1', (l) => (l.source as GraphNode).y ?? 0)
-          .attr('x2', (l) => (l.target as GraphNode).x ?? 0)
-          .attr('y2', (l) => (l.target as GraphNode).y ?? 0);
+          .attr('x1', (l) => (l.source as unknown as GraphNode).x ?? 0)
+          .attr('y1', (l) => (l.source as unknown as GraphNode).y ?? 0)
+          .attr('x2', (l) => (l.target as unknown as GraphNode).x ?? 0)
+          .attr('y2', (l) => (l.target as unknown as GraphNode).y ?? 0);
         node.attr('transform', (d) => `translate(${d.x ?? 0},${d.y ?? 0})`);
       });
 
