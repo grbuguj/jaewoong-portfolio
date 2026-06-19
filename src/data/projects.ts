@@ -47,8 +47,10 @@ export const projects: Project[] = [
     takeaway: '아버지 사무소에서 실제로 쓸 사이트를 만들었습니다. AI 상담이라고 전면에 내세우기보다 방문자가 부담 없이 상담을 신청하게 만드는 게 목표였습니다. Claude API 스트리밍을 처음 써봤고, 키 노출을 막으려고 서버 프록시를 따로 두는 구조도 이때 처음 직접 짰습니다.',
     category: 'FS',
     stack: ['Next.js', 'TypeScript', 'Claude API', 'Tailwind CSS'],
+    url: 'https://kimkw-law.vercel.app/',
     github: 'https://github.com/grbuguj/kimkw-law',
     highlight: true,
+    live: true,
   },
   {
     id: 'seouldate',
