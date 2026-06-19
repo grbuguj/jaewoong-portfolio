@@ -107,7 +107,7 @@ export default function About() {
               안녕하세요,<br />개발자 김재웅입니다.
             </motion.h2>
             <motion.p variants={fadeInUp} className="text-slate-600 leading-relaxed mb-4">
-              초등학생 때 마인크래프트 서버를 직접 열고, 트리거 구문부터 도메인 연결까지 독학으로
+              초등학생 때 마인크래프트 서버를 직접 열고, 게임 서버 로직부터 도메인 연결까지 독학으로
               파고들었습니다. 그때부터 만들고 싶은 게 생기면 직접 구현하는 게 습관이 됐습니다.
             </motion.p>
             <motion.p variants={fadeInUp} className="text-slate-600 leading-relaxed">
