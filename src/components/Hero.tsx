@@ -87,6 +87,14 @@ export default function Hero() {
                 GitHub
               </a>
               <a
+                href="https://www.linkedin.com/in/kimjaeung-dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-slate-200 text-slate-700 text-sm font-semibold hover:border-slate-400 hover:text-slate-900 transition-colors"
+              >
+                LinkedIn
+              </a>
+              <a
                 href="https://velog.io/@bugs0613"
                 target="_blank"
                 rel="noopener noreferrer"

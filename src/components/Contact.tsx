@@ -36,6 +36,7 @@ export default function Contact() {
           <motion.div variants={fadeInUp} className="flex justify-center gap-4 mt-8">
             {[
               { label: 'GitHub', url: 'https://github.com/grbuguj' },
+              { label: 'LinkedIn', url: 'https://www.linkedin.com/in/kimjaeung-dev/' },
               { label: 'Velog', url: 'https://velog.io/@bugs0613' },
               { label: '횃불이유괴단', url: 'https://torchers-web.vercel.app' },
             ].map((link) => (
