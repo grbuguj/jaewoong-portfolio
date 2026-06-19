@@ -39,7 +39,7 @@ export const projects: Project[] = [
   },
   {
     id: 'kimkw-law',
-    title: '법무사 AI 상담 도우미',
+    title: '법무사 사이트',
     subtitle: '실 의뢰 · 법무사 AI 상담 랜딩 페이지',
     date: '2026.06',
     description: '실제 운영 중인 법무사 사무소용 AI 상담 랜딩 페이지. 방문자 유입부터 상담 신청까지 흐름을 설계했습니다.',
