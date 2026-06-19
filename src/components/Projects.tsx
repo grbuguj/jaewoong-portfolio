@@ -144,20 +144,8 @@ export default function Projects() {
                   <div className="p-5 flex flex-col flex-1">
                     {/* Title row */}
                     <div className="flex items-start justify-between mb-2">
-                      <div className="flex items-center gap-2 flex-1 min-w-0 flex-wrap">
-                        <h3 className="font-bold text-slate-900 text-base leading-tight">{p.title}</h3>
-                        {p.wip && (
-                          <span className="shrink-0 flex items-center gap-1 text-[10px] px-1.5 py-0.5 rounded-full bg-blue-50 text-blue-500 border border-blue-200 font-medium">
-                            <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse inline-block" />
-                            개발중
-                          </span>
-                        )}
-                        {p.live && (
-                          <span className="shrink-0 flex items-center gap-1 text-[10px] px-1.5 py-0.5 rounded-full bg-green-50 text-green-600 border border-green-200 font-medium">
-                            <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse inline-block" />
-                            운영중
-                          </span>
-                        )}
+                      <div className="flex items-center gap-2 flex-1 min-w-0">
+                        <h3 className="font-bold text-slate-900 text-base leading-tight truncate">{p.title}</h3>
                       </div>
                       <div className="flex items-center gap-1.5 ml-2 shrink-0">
                         {p.instagram && (
@@ -184,10 +172,22 @@ export default function Projects() {
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-2 mb-2">
+                    <div className="flex items-center gap-2 mb-2 flex-wrap">
                       <p className="text-[12px] text-slate-400 font-mono">{p.subtitle}</p>
                       <span className="text-slate-200 text-[10px]">·</span>
                       <p className="text-[11px] text-slate-400 font-mono">{p.date}</p>
+                      {p.live && (
+                        <span className="shrink-0 flex items-center gap-1 text-[10px] px-1.5 py-0.5 rounded-full bg-green-50 text-green-600 border border-green-200 font-medium">
+                          <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse inline-block" />
+                          운영중
+                        </span>
+                      )}
+                      {p.wip && (
+                        <span className="shrink-0 flex items-center gap-1 text-[10px] px-1.5 py-0.5 rounded-full bg-blue-50 text-blue-500 border border-blue-200 font-medium">
+                          <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse inline-block" />
+                          개발중
+                        </span>
+                      )}
                     </div>
                     <p className="text-[13px] text-slate-500 leading-relaxed line-clamp-2 flex-1">{p.description}</p>
 
